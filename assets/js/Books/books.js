@@ -33,9 +33,9 @@ class BooksList extends React.Component {
                 { book.author }
             </td>
             <td>
-                <a href="" className="btn btn-primary mx-1"><span className="bi-eye"></span></a>
-                <a href="" className="btn btn-success mx-1"><span className="bi-pencil"></span></a>
-                <a href="" className="btn btn-danger mx-1"><span className="bi-trash3"></span></a>
+                <a href={"book.html?book=" + book.id} className="btn btn-primary mx-1"><span className="bi-eye"></span></a>
+                <a href={"edit-book.html?book=" + book.id} className="btn btn-success mx-1"><span className="bi-pencil"></span></a>
+                <a href="#" data-book-id={book.id} className="del-book-btn btn btn-danger mx-1"><span className="bi-trash3"></span></a>
             </td>
         </tr>
         );
