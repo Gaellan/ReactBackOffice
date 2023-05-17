@@ -43,7 +43,7 @@ class BooksList extends React.Component {
         return (
             <React.Fragment>
                 <h1 className="mb-3">Books</h1>
-                <a className="btn btn-primary" href=""><span className="bi-plus-square"></span> Create a book</a>
+                <a className="btn btn-primary" href="create-book.html"><span className="bi-plus-square"></span> Create a book</a>
                 <table className="table mt-5">
                     <thead>
                     <tr>

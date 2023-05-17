@@ -63,7 +63,7 @@ class Book extends React.Component {
                     { review.stars }
                 </td>
                 <td>
-                    <a href={"book-review.html?book="+ review.id} className="btn btn-primary mx-1"><span className="bi-eye"></span></a>
+                    <a href={"book-review.html?book-review="+ review.id} className="btn btn-primary mx-1"><span className="bi-eye"></span></a>
                     <a href="#" data-review-id={review.id} className="del-review-btn btn btn-danger mx-1"><span className="bi-trash3"></span></a>
                 </td>
             </tr>
@@ -73,7 +73,7 @@ class Book extends React.Component {
             <React.Fragment>
                 <nav aria-label="breadcrumb my-2">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="#">Books</a></li>
+                        <li className="breadcrumb-item"><a href="books.html">Books</a></li>
                         <li className="breadcrumb-item active" aria-current="page">{this.state.book.title}</li>
                     </ol>
                 </nav>
