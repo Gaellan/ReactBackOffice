@@ -71,6 +71,12 @@ class Book extends React.Component {
 
         return (
             <React.Fragment>
+                <nav aria-label="breadcrumb my-2">
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item"><a href="#">Books</a></li>
+                        <li className="breadcrumb-item active" aria-current="page">{this.state.book.title}</li>
+                    </ol>
+                </nav>
                 <h1 className="my-3">
                     { this.state.book.title }
                 </h1>
