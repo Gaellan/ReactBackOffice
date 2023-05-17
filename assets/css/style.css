@@ -1,0 +1,19 @@
+body {
+    padding:0!important;
+}
+
+/* INDEX.HTML */
+#login {
+    min-height:100vh;
+    background-color: #cdcdcd;
+}
+
+#login form {
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* LAYOUT */
+main {
+    min-height: 90vh;
+}
