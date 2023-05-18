@@ -6,6 +6,29 @@ class BooksList extends React.Component {
         this.state = {
             books : []
         };
+
+        this.deleteBook = this.deleteBook.bind(this);
+    }
+
+    deleteBook(event) {
+        let book = event.target.getAttribute("data-book");
+
+        const options = {
+            method: "DELETE",
+        };
+
+        console.log(options);
+
+        fetch('http://127.0.0.1:3001/books/' + book, options)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                window.location.href = "books.html";
+            })
+            .catch(error => {
+                console.log(error);
+                window.location.href = "books.html";
+            });
     }
 
     componentDidMount() {
@@ -14,6 +37,7 @@ class BooksList extends React.Component {
             .then(json => {
                 this.setState({books : json})
             })
+
     }
 
     render() {
@@ -35,7 +59,7 @@ class BooksList extends React.Component {
             <td>
                 <a href={"book.html?book=" + book.id} className="btn btn-primary mx-1"><span className="bi-eye"></span></a>
                 <a href={"edit-book.html?book=" + book.id} className="btn btn-success mx-1"><span className="bi-pencil"></span></a>
-                <a href="#" data-book-id={book.id} className="del-book-btn btn btn-danger mx-1"><span className="bi-trash3"></span></a>
+                <button data-book={book.id} onClick={this.deleteBook} className="del-book-btn btn btn-danger mx-1"><span data-book={book.id} className="bi-trash3"></span></button>
             </td>
         </tr>
         );
